@@ -1,0 +1,41 @@
+.difficulty-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.difficulty-options label {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ff8c00;
+    border-radius: 20px;
+    color: #ff8c00;
+    transition: all 0.2s;
+}
+.difficulty-options input[type="radio"] {
+    display: none;
+}
+.difficulty-options input[type="radio"]:checked + label {
+    background-color: #ff4500;
+    color: black;
+    font-weight: bold;
+    border-color: #ff4500;
+}
+
+/* 送信ボタンのスタイル */
+.send-button {
+    display: inline-block;
+    background: #ff4500;
+    color: black;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.send-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.03);
+}

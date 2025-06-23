@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>目標達成サポーター</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2em auto; padding: 0 1em; }
+        .suggestion { font-size: 1.5em; font-weight: bold; color: #007bff; margin-top: 1em; padding: 1em; background-color: #f0f8ff; border-radius: 8px;}
+    </style>
+</head>
+<body>
+    <h1>目標達成サポーター 🤖</h1>
+    <p>あなたの目標を入力すると、AIが今日やるべきことを一つ提案します。</p>
+
+    <form method="post">
+        <label for="goal"><strong>あなたの目標:</strong></label><br>
+        <input type="text" id="goal" name="goal" size="50" required><br><br>
+        <input type="submit" value="AIに相談する">
+    </form>
+
+    {% if suggestion %}
+        <hr>
+        <h2>AIからの提案</h2>
+        <p>目標「<strong>{{ goal }}</strong>」を達成するために、今日はこれをやってみましょう！</p>
+        <p class="suggestion">{{ suggestion }}</p>
+    {% endif %}
+</body>
+</html>

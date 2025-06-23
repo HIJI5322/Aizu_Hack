@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドM向けToDoリスト - 目標入力!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Extreme/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Extreme/input_style.css') }}">
+</head>
+<body>
+  <div class="bg_pattern Rhombus"></div>
+  <form action="{{ url_for('Extreme.show_result_page') }}" method="POST" class="main-container">
+    <div class="input-row">
+      <label for="goal-input">目標を入力</label><br>
+      <input type="text" id="goal-input" name="goal_text" required style="width: 80%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;">
+    </div>
+  
+    <p style="margin-top: 2rem;">難易度を選択してください</p>
+  
+    <div class="difficulty-options">
+      <input type="radio" id="hard" name="difficulty" value="hard" required>
+      <label for="hard">Hard</label>
+      
+      <input type="radio" id="extreme" name="difficulty" value="extreme">
+      <label for="extreme">Extreme</label>
+    </div>
+  
+    <button type="submit" class="send-button">タスクを受け取る</button>
+  </form>
+</body>
+</html>

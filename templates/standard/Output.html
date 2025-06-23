@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='standard/style.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <label>今日あなたがTo Doすることはーーー</label>
+    <div class="todo-list-container">
+      {% for todo_item in todo_list %}
+      <label class="todo-item">
+        <input type="checkbox" name="todo">
+        <span class="todo-text">{{todo_item}}</span>
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

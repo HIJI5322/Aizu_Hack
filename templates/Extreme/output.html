@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本日の試練</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Extreme/style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <label>今日のタスク...</label>
+        <div class="todo-list-container">
+          {% for todo_item in todo_list %}
+          <label class="todo-item">
+            <input type="checkbox" name="todo">
+            <span class="todo-text">{{todo_item}}</span>
+          </label>
+          {% endfor %}
+        </div>
+
+        {% if difficulty == 'extreme' %}
+        <form action="{{ url_for('Extreme.reject_task') }}" method="POST" style="margin-top: 20px;">
+            <button type="submit" class="reject-button">このタスクを拒否する</button>
+        </form>
+        {% endif %}
+
+        </div>
+</body>
+</html>

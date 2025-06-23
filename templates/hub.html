@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoアプリ選択</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        .container { text-align: center; }
+        .card { background: white; padding: 2rem 3rem; margin: 1rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none; color: #333; display: block; }
+        .card h2 { margin-top: 0; color: #007bff; }
+        .card p { color: #555; }
+        .card:hover { transform: translateY(-5px); transition: all 0.2s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>どちらのToDoリストを利用しますか？</h1>
+        <div>
+            <a href="/standard" class="card">
+                <h2>3択ToDo</h2>
+                <p>標準的なToDoリスト。</p>
+            </a>
+            <a href="/AIsupport" class="card">
+                <h2>AIサポートToDo</h2>
+                <p>タスクを1つだけ提案するシンプルなToDo。</p>
+            </a>
+            <a href="/Extreme" class="card">
+                <h2>ドM向けToDo</h2>
+                <p>困難な試練に挑戦し、圧倒的成長を目指す。</p>
+            </a>
+            <a href="/chatlike" class="card">
+                <h2>チャット風ToDo</h2>
+                <p>チャットアプリ風にわかりやすくタスクを取得。</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

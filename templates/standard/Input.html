@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='standard/style.css') }}">
+</head>
+<body>
+  <div class="bg_pattern Rhombus"></div>
+  <form action="{{ url_for('standard.show_result_page') }}" method="POST" class="main-container">
+    <div class="input-row">
+      <label for="goal-input">目標を入力してください</label><br>
+      <input type="text" id="goal-input" name="goal_text" required>
+    </div>
+  
+    <p>難易度を選んでください</p>
+  
+    <div class="difficulty-selector">
+        <input type="radio" id="easy" name="difficulty" value="easy" required>
+        <label for="easy">easy</label>
+
+        <input type="radio" id="intermediate" name="difficulty" value="intermediate">
+        <label for="intermediate">intermediate</label>
+        
+        <input type="radio" id="hard" name="difficulty" value="hard">
+        <label for="hard">hard</label>
+    </div>
+    <button type="submit" class="send-button">送信</button>
+  </form>
+</body>
+</html>

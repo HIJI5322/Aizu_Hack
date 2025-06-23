@@ -1,0 +1,97 @@
+body {
+    background: #fafafa;
+    font-family: 'Segoe UI', 'Meiryo', sans-serif;
+}
+
+#box {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 16px;
+    width: 350px;
+    height: 500px;
+    margin: 40px auto 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 16px;
+    border-radius: 18px;
+    margin-bottom: 4px;
+    font-size: 1em;
+    word-break: break-word;
+    display: inline-block;
+    position: relative;
+}
+
+.user {
+    background: #3797f0;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.bot {
+    background: #efefef;
+    color: #262626;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.level-btn {
+    border: none;
+    background: #fafafa;
+    color: #3797f0;
+    border-radius: 12px;
+    padding: 8px 0;
+    margin: 2px 0;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.level-btn:hover {
+    background: #e6f0fa;
+}
+
+#input {
+    width: 350px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+#message {
+    flex: 1;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 1em;
+    outline: none;
+    background: #fafafa;
+}
+
+#button {
+    background: #3797f0;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#button:hover {
+    background: #1877c9;
+}
